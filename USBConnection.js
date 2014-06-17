@@ -1,6 +1,6 @@
-var POWERMATE_VENDOR_ID = 1917; //0x077d;
-var POWERMATE_PRODUCT_ID = 1040; //0x0410;
-var DEVICE_INFO = {"vendorId": POWERMATE_VENDOR_ID, "productId": POWERMATE_PRODUCT_ID};
+var PARASITE_VENDOR_ID = 1204; //0x04b4;
+var PARASITE_PRODUCT_ID = 8213; //0x2015;
+var DEVICE_INFO = {"vendorId": PARASITE_VENDOR_ID, "productId": PARASITE_PRODUCT_ID};
 var parasiteDevice;
 var permissionObj = {permissions: [{'usbDevices': [DEVICE_INFO] }]};
 var requestButton = document.getElementById("requestPermission");
@@ -32,7 +32,7 @@ var onEvent = function(usbEvent) {
       ledMultiplier: dv.getUint8(5)
     };
 
-    chrome.usb.interruptTransfer(parasiteDevice, transfer, onEvent);
+    //chrome.usb.interruptTransfer(parasiteDevice, transfer, onEvent);
 };
 
 
